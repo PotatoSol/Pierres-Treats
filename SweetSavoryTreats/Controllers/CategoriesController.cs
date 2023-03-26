@@ -1,16 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using SweetSavoryTreats.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ToDoList.Controllers
+namespace SweetSavoryTreats.Controllers
 {
   public class CategoriesController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly SweetSavoryTreatsContext _db;
 
-    public CategoriesController(ToDoListContext db)
+    public CategoriesController(SweetSavoryTreatsContext db)
     {
       _db = db;
     }

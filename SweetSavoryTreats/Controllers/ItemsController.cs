@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using SweetSavoryTreats.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
@@ -9,15 +9,15 @@ using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
 
-namespace ToDoList.Controllers
+namespace SweetSavoryTreats.Controllers
 {
   [Authorize]
   public class ItemsController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly SweetSavoryTreatsContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
 
-    public ItemsController(UserManager<ApplicationUser> userManager, ToDoListContext db)
+    public ItemsController(UserManager<ApplicationUser> userManager, SweetSavoryTreatsContext db)
     {
       _userManager = userManager;
       _db = db;

@@ -1,4 +1,4 @@
-namespace ToDoList.Models
+namespace SweetSavoryTreats.Models
 {
   public class ItemTag
     {       

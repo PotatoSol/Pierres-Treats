@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using SweetSavoryTreats.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ToDoList.Controllers
+namespace SweetSavoryTreats.Controllers
 {
   public class TagsController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly SweetSavoryTreatsContext _db;
 
-    public TagsController(ToDoListContext db)
+    public TagsController(SweetSavoryTreatsContext db)
     {
       _db = db;
     }

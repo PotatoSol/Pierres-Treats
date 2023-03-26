@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ToDoList.ViewModels
+namespace SweetSavoryTreats.ViewModels
 {
   public class LoginViewModel
   {

@@ -1,7 +1,7 @@
 
 using System.Collections.Generic;
 
-namespace ToDoList.Models
+namespace SweetSavoryTreats.Models
 {
   public class Category
   {

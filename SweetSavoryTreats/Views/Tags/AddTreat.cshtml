@@ -2,15 +2,15 @@
   Layout = "_Layout";
 }
 
-@model SweetSavoryTreats.Models.Tag
+@model SweetSavoryTreats.Models.Flavor
 
 <h2>Add an item</h2>
 
-<h4>Add an item to this tag: @Html.DisplayFor(model => model.Title)</h4>
+<h4>Add an item to this flavor: @Html.DisplayFor(model => model.Title)</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.TagId)
+    @Html.HiddenFor(model => model.FlavorId)
 
     @Html.Label("Select item")
     @Html.DropDownList("ItemId")

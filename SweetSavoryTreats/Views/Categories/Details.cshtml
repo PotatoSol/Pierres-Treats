@@ -10,31 +10,31 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-@if(@Model.Items.Count == 0)
+@if(@Model.Treats.Count == 0)
 {
-  <p>This category does not contain any items</p>
+  <p>This category does not contain any treats</p>
 }
 else
 {
-  <h4>Items the category contains:</h4>
+  <h4>Treats the category contains:</h4>
   <ul>
-  @foreach(Item item in Model.Items)
+  @foreach(Treat treat in Model.Treats)
   {
-    string tags = "";
-    @if(item.JoinEntities.Count == 0)
+    string flavors = "";
+    @if(treat.JoinEntities.Count == 0)
     {
-      tags = "This item does not have any tags.";
+      flavors = "This treat does not have any flavors.";
     }
     else
     {
-      List<string> tagList = new List<string>();
-      @foreach(ItemTag join in item.JoinEntities)
+      List<string> flavorList = new List<string>();
+      @foreach(TreatFlavor join in treat.JoinEntities)
       {
-        tagList.Add(join.Tag.Title);
+        flavorList.Add(join.Flavor.Title);
       }
-      tags = String.Join(", ", tagList);
+      flavors = String.Join(", ", flavorList);
     }
-    <li>@item.Description | Tags: @tags</li>
+    <li>@treat.Description | Flavors: @flavors</li>
   }
   </ul>
 }
@@ -42,4 +42,4 @@ else
 <p>@Html.ActionLink("Back to categories", "Index")</p>
 <p>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</p>
 <p>@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</p>
-<p>@Html.ActionLink("Add new item", "Create", "Items")</p>
+<p>@Html.ActionLink("Add new treat", "Create", "Treats")</p>

@@ -37,9 +37,9 @@ namespace SweetSavoryTreats.Controllers
     public ActionResult Details(int id)
     {
       Category thisCategory = _db.Categories
-                                .Include(cat => cat.Items)
-                                .ThenInclude(item => item.JoinEntities)
-                                .ThenInclude(join => join.Tag)
+                                .Include(cat => cat.Treats)
+                                .ThenInclude(treat => treat.JoinEntities)
+                                .ThenInclude(join => join.Flavor)
                                 .FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }

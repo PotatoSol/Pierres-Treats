@@ -2,15 +2,15 @@
   Layout = "_Layout";
 }
 
-@model ToDoList.Models.Item
+@model SweetSavoryTreats.Models.Treat
 
 <h2>Edit</h2>
 
-<h4>Edit this item: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit this Treat: @Html.DisplayFor(model => model.Description)</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.ItemId)
+  @Html.HiddenFor(model => model.TreatId)
 
   @Html.LabelFor(model => model.Description)
   @Html.EditorFor(model => model.Description)

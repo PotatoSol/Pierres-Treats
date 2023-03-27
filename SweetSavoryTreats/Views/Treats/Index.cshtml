@@ -2,23 +2,23 @@
   Layout = "_Layout";
 }
 
-@using ToDoList.Models;
+@using SweetSavoryTreats.Models;
 
-<h1>Items for @User.Identity.Name</h1>
+<h1>Treats for @User.Identity.Name</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>No items have been added yet!</h3>
+  <h3>No treats have been added yet!</h3>
 } 
 else
 {
   <ul>
-    @foreach (Item item in Model)
+    @foreach (Treat treat in Model)
     {
-      <li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId }) | @item.Category.Name</li>
+      <li>@Html.ActionLink($"{treat.Description}", "Details", new { id = treat.TreatId }) | @treat.Category.Name</li>
     }
   </ul>
 }
 
-<p>@Html.ActionLink("Add new item", "Create")</p>
+<p>@Html.ActionLink("Add new treat", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

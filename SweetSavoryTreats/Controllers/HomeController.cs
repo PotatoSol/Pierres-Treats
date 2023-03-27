@@ -29,10 +29,10 @@ namespace SweetSavoryTreats.Controllers
         ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
         if (currentUser != null)
         {
-          Treat[] Treats = _db.Treats
+          Treat[] treats = _db.Treats
                       .Where(entry => entry.User.Id == currentUser.Id)
                       .ToArray();
-          model.Add("Treats", Treats);
+          model.Add("treats", treats);
         }
         return View(model);
       }

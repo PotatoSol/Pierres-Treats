@@ -1,8 +1,8 @@
-# _Factory_
+# _Pierre's Sweet and Savory Treats_
 
 #### By _**Michael Sol**_
 
-#### _A MVC web application and database for a fictional factory exploring many to many relationships_
+#### _A MVC web application and database for storing and viewing treats and flavors_
 
 ## Technologies Used
 
@@ -12,7 +12,7 @@
 
 ## Description
 
-_Allows a fictional factory to organize engineers and their machines.  Engineers can work on many machines, and machines can have many engineers work on them_
+_Allows the storage and organization and viewing of treats and their flavors_
 
 ## Setup/Installation Requirements
 
@@ -20,7 +20,7 @@ _Allows a fictional factory to organize engineers and their machines.  Engineers
 * _Clone the Repo_
 * _Open the project using VS Code_
 * _Open a new terminal_
-* _In the terminal, navigate to 'newfactory.Solution/Factory'_ 
+* _In the terminal, navigate to 'Pierres-Treats/SweetSavoryTreats'_ 
 * _Create a appsettings.json file_
 * _Include the following lines in it:_
 

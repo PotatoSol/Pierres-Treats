@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace SweetSavoryTreats.Models
 {
-  public class Tag
+  public class Flavor
     {
-        public int TagId { get; set; }
+        public int FlavorId { get; set; }
         public string Title { get; set; }
-        public List<ItemTag> JoinEntities { get;}
+        public List<TreatFlavor> JoinEntities { get;}
     }
 }
